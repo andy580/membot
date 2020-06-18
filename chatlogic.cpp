@@ -18,11 +18,14 @@ ChatLogic::ChatLogic()
     ////
 
     // create instance of chatbot
+
     // Task 5 no longer using _chatbot
-    _chatBot = new ChatBot("../images/chatbot.png");
+    // _chatBot = new ChatBot("../images/chatbot.png");
 
     // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
-    _chatBot->SetChatLogicHandle(this);
+
+    //Task 5 no longer owning _chatbot
+    // _chatBot->SetChatLogicHandle(this);
 
     ////
     //// EOF STUDENT CODE
@@ -34,8 +37,9 @@ ChatLogic::~ChatLogic()
     ////
 
     // delete chatbot instance
+
     // Task 5 no longer using _chatbot
-    delete _chatBot;
+    // delete _chatBot;
 
     // delete all nodes
     // Task 3, converted _nodes to smart pointers therefore do not need to delete explicitly
@@ -249,9 +253,10 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
     }
 
     // add chatbot to graph root node
+
     // Task 5 : not using _chatbot
-    _chatBot->SetRootNode(rootNode);
-    rootNode->MoveChatbotHere(_chatBot);
+    // _chatBot->SetRootNode(rootNode);
+    // rootNode->MoveChatbotHere(_chatBot);
 
     // Task 5: loading instance of chatbot on stack
     
